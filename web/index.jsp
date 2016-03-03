@@ -134,46 +134,24 @@
                         <div class="container">
                             <div class="row">
                                 <div class="twelve columns">
-                                    <h1>We are Donut King. We offer you the finest donuts you can find on your way home. Visit us for a world of deliciousness.</h1>
+                                    <h1>We are Donut King. We offer you the finest donuts you can find on your way home.<br/>
+                                        Visit us for a world of deliciousness.</h1>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
                 <!-- END HEADER -->
-
-                <!-- SLIDER -->
-                <div id="outerslider">
-                    <div id="slidercontainer">
-
-                        <section id="slider">
-                            <div id="layerslider" class="slideritems">
-
-                                <div class="ls-layer" id="ls-layer-2" data-rel="slidedelay: 3000;delayout: 750;">
-
-                                </div>
-                                <div class="ls-layer" id="ls-layer-3" data-rel="slidedelay: 3000;delayout: 750;">
-
-                                </div>
-                            </div>
-                        </section>
-
-                    </div>
-                </div>
-                <!-- END SLIDER -->
-
 
                 <!-- MAIN CONTENT -->
                 <div id="outermain">
                     <div class="container">
                         <div class="row">
                             <section id="maincontent" class="twelve columns">
-
                                 <section class="content">
-
                                     <div class="featured-products">  
                                         <div class="header-wrapper">
-                                            <h2>Featured Products</h2><span></span>
+                                            <h2>Delicious Deals</h2><span></span>
                                             <div class="clear"></div>
                                         </div>
                                         <div class="row">
@@ -256,9 +234,9 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="one_third columns"><img src="images/content/EasyCustomize.jpg" alt="" class="border"/></div>
-                                        <div class="one_third columns"><img src="images/content/AwesomeAdmin.jpg" alt="" class="border"/></div>
-                                        <div class="one_third columns"><img src="images/content/sofaAwesome.jpg" alt="" class="border"/></div>
+                                        <div class="one_third columns"><img src="images/content/line1-1.jpg" alt="" class="border"/></div>
+                                        <div class="one_third columns"><img src="images/content/line1-2.jpg" alt="" class="border"/></div>
+                                        <div class="one_third columns"><img src="images/content/line1-3.jpg" alt="" class="border"/></div>
                                     </div> 
 
                                     <div class="new-products">                 
@@ -345,11 +323,18 @@
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="one_half columns"><img src="images/content/FlexibleLayout.png" alt=""/></div>
-                                        <div class="one_half columns"><img src="images/content/WellDocumented.png" alt=""/></div>
+                                    <div class="headline" style="margin-top: 20px">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="twelve columns">
+                                                    <h1>
+                                                        Browse through our products and order them online to have a delicious experience.<br/>
+                                                        Donut King is your stop for donuts.
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-
                                 </section>
 
                             </section>
