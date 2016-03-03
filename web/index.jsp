@@ -4,9 +4,16 @@
     Author     : Buddhi
 --%>
 
+<%@page import="controller.DonutController"%>
+<%@page import="model.Donut"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    DonutController donutController = new DonutController();
+%>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -143,6 +150,10 @@
                 </div>
                 <!-- END HEADER -->
 
+                <div style="margin-top: 10px; margin-bottom: 30px">
+                    <img alt="slider" src="images/slider.jpg"/>
+                </div>
+
                 <!-- MAIN CONTENT -->
                 <div id="outermain">
                     <div class="container">
@@ -154,82 +165,30 @@
                                             <h2>Delicious Deals</h2><span></span>
                                             <div class="clear"></div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row"> 
+                                            <%
+                                                ArrayList<Donut> topDonuts = donutController.getTopDonuts();
+
+                                                for (Donut d : topDonuts) {
+                                            %>
                                             <div class="one_fifth columns">
                                                 <div class="product-wrapper">
-                                                    <a title="Men's Watch" href="product-details.html"><img src="images/content/products/p-31.jpg" alt=""/></a>
-                                                    <h3><a title="Men's Watch" href="product-details.html">Men's Watch</a></h3>
+                                                    <a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><img src="images/content/products/1.jpg" alt=""/></a>
+                                                    <h3><a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><%= d.getName()%></a></h3>
                                                     <div class="price-cart-wrapper">
                                                         <div class="price">
-                                                            $120.00
+                                                            <%= d.getPrice()%>
                                                         </div>
                                                         <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
+                                                            <a href="product-details.html?id=<%= d.getId()%>" class="more">more</a>
                                                         </div>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="White Dress" href="product-details.html"><img src="images/content/products/p-6.jpg" alt=""/></a>
-                                                    <h3><a title="White Dress" href="product-details.html">White Dress</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="Flower Handbag" href="product-details.html"><img src="images/content/products/p-32.jpg" alt=""/></a>
-                                                    <h3><a title="Flower Handbag" href="product-details.html">Flower Handbag</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="Red High Heels" href="product-details.html"><img src="images/content/products/p-25.jpg" alt=""/></a>
-                                                    <h3><a title="Red High Heels" href="product-details.html">Red High Heels</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="Men's Suit" href="product-details.html"><img src="images/content/products/p-9.jpg" alt=""/></a>
-                                                    <h3><a title="Men's Suit" href="product-details.html">Men's Suit</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <%
+                                                }
+                                            %>
                                         </div>
                                     </div>
 
@@ -245,81 +204,29 @@
                                             <div class="clear"></div>
                                         </div>            
                                         <div class="row">
+                                            <%
+                                                ArrayList<Donut> recentDonuts = donutController.getRecentDonuts();
+
+                                                for (Donut d : recentDonuts) {
+                                            %>
                                             <div class="one_fifth columns">
                                                 <div class="product-wrapper">
-                                                    <a title="Woman's Dress Flower" href="product-details.html"><img src="images/content/products/p-1.jpg" alt=""/></a>
-                                                    <h3><a title="Woman's Dress Flower" href="product-details.html">Woman's Dress Flower</a></h3>
+                                                    <a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><img src="images/content/products/1.jpg" alt=""/></a>
+                                                    <h3><a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><%= d.getName()%></a></h3>
                                                     <div class="price-cart-wrapper">
                                                         <div class="price">
-                                                            $120.00
+                                                            <%= d.getPrice()%>
                                                         </div>
                                                         <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
+                                                            <a href="product-details.html?id=<%= d.getId()%>" class="more">more</a>
                                                         </div>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="White Lamp" href="product-details.html"><img src="images/content/products/p-17.jpg" alt=""/></a>
-                                                    <h3><a title="White Lamp" href="product-details.html">White Lamp</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="iPhone 4S for Gift" href="product-details.html"><img src="images/content/products/p-23.jpg" alt=""/></a>
-                                                    <h3><a title="iPhone 4S for Gift" href="product-details.html">iPhone 4S for Gift</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="Couple Shoes" href="product-details.html"><img src="images/content/products/p-26.jpg" alt=""/></a>
-                                                    <h3><a title="Couple Shoes" href="product-details.html">Couple Shoes</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="Brown Chair" href="product-details.html"><img src="images/content/products/p-18.jpg" alt=""/></a>
-                                                    <h3><a title="Brown Chair" href="product-details.html">Brown Chair</a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            $120.00
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <%
+                                                }
+                                            %>
                                         </div>
                                     </div>
 
