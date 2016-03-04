@@ -154,7 +154,7 @@
                                                     <input type="submit" class="button" value="login" />
                                                 </fieldset>
                                             </form><br>
-                                            <a href="#">Don't have a account?</a>
+                                            <a href="./register.jsp">Don't have a account?</a>
                                         </div>
                                         <br>
                                         <hr>
