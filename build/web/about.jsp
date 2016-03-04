@@ -1,18 +1,10 @@
 <%-- 
-    Document   : products
-    Created on : Mar 4, 2016, 2:33:55 AM
+    Document   : about
+    Created on : Mar 4, 2016, 2:28:57 AM
     Author     : Buddhi
 --%>
 
-<%@page import="controller.DonutController"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="model.Donut"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<%
-    DonutController donutController = new DonutController();
-%>
-
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -23,7 +15,7 @@
         <!-- Basic Page Needs
   ================================================== -->
         <meta charset="utf-8" />
-        <title>Donut King Products</title>
+        <title>Donut King About</title>
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="" />
         <meta name="description" content="" />
@@ -40,8 +32,9 @@
         <link rel="stylesheet" href="styles/style.css" />
         <link rel="stylesheet" href="styles/inner.css" />
         <link rel="stylesheet" href="styles/layout.css" />
+        <link rel="stylesheet" href="styles/layerslider.css" />
         <link rel="stylesheet" href="styles/color.css" />
-
+        <link rel="stylesheet" href="styles/prettyPhoto.css"  media="screen" />
 
 
         <!--[if lt IE 9]>
@@ -54,10 +47,8 @@
 
     </head>
     <body>
-
         <div id="bodychild">
             <div id="outercontainer">
-
                 <!-- HEADER -->
                 <div id="outerheader">
                     <header>
@@ -83,8 +74,10 @@
                                     <div class="right six columns">
 
                                         <form action="#" id="searchform" method="get">
+
                                             <input type="text" value="" id="search" name="search" class="field" placeholder="Search keywords here">
                                             <input type="submit" value="" class="searchbutton">
+
                                         </form>
 
                                         <div id="shopping-cart-wrapper">
@@ -124,8 +117,8 @@
                                     <nav id="nav-wrap" class="twelve columns">
                                         <ul id="sf-nav" class="sf-menu">
                                             <li><a href="index.jsp">Home</a></li>
-                                            <li><a href="about.jsp">About Us</a></li>
-                                            <li class="current"><a href="products.jsp">Products</a></li>
+                                            <li class="current"><a href="about.jsp">About Us</a></li>
+                                            <li><a href="products.jsp">Products</a></li>
                                             <li><a href="cart.jsp">Cart</a></li>
                                         </ul><!-- topnav -->
                                     </nav><!-- nav -->	
@@ -134,52 +127,56 @@
                         </section>
 
                         <div class="clear"></div>
-                    </header>          
-
+                    </header>
                 </div>
                 <!-- END HEADER -->
-
 
                 <!-- MAIN CONTENT -->
                 <div id="outermain">
                     <div class="container">
                         <div class="row">
+                            <section id="maincontent" class="twelve columns">
 
-                            <section id="maincontent" class="twelve columns positionleft">
-                                <div class="padcontent">
-                                    <section class="content" id="product-container">                                      
-                                        <div class="row">
-                                            <%
-                                                ArrayList<Donut> allDonuts = donutController.getAllDonuts();
+                                <section class="content">
+                                    <h1 class="pagetitle">About Our Company</h1>
 
-                                                for (Donut d : allDonuts) {
-                                            %>
-                                            <div class="one_fifth columns">
-                                                <div class="product-wrapper">
-                                                    <a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><img src="images/content/products/1.jpg" alt=""/></a>
-                                                    <h3><a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><%= d.getName()%></a></h3>
-                                                    <div class="price-cart-wrapper">
-                                                        <div class="price">
-                                                            <%= d.getPrice()%>
-                                                        </div>
-                                                        <div class="cart">
-                                                            <a href="product-details.html?id=<%= d.getId()%>" class="more">more</a>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <%
-                                                }
-                                            %>
+                                    <p><img src="images/content/pic.jpg" alt="" class="frame alignleft"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis purus a arcu porta convallis ut in nunc. Donec elementum erat ipsum, eu consectetur tellus. Morbi et venenatis dui. Quisque at arcu ante, in placerat arcu. Curabitur scelerisque imperdiet elementum. </p>
+
+                                    <p>Cras sed tortor a tortor malesuada tempus eget non ante. Pellentesque cursus, elit nec semper porttitor, nisi magna adipiscing quam, nec convallis leo erat a nunc. Nulla libero urna, faucibus eget fermentum tempus, porttitor ac urna. In tempus lacinia neque id auctor. </p>
+
+
+
+                                    <div class="separator"></div>
+
+                                    <div class="row">
+                                        <div class="one_third columns">
+                                            <h3>Our Philosophy</h3>
+                                            <p>Aliquam luctus rhoncus eros, non malesuada nunc consectetur a. Donec tristique rhoncus libero vitae cursus. Morbi commodo, massa non lobortis rutrum, tortor risus viverra augue, et vehicula quam quam molestie ante. Donec ac eleifend turpis.</p>
                                         </div>
-                                        <div class="wp-pagenavi">
-                                            <a href="#" class="page">1</a><span class="current"><span>2</span></span><a href="#" class="page">3</a> &nbsp;&nbsp;Showing 4 to 4 of 12 (3 Pages)
+                                        <div class="one_third columns">
+                                            <h3>Our Vision</h3>
+                                            <p>Aliquam luctus rhoncus eros, non malesuada nunc consectetur a. Donec tristique rhoncus libero vitae cursus. Morbi commodo, massa non lobortis rutrum, tortor risus viverra augue, et vehicula quam quam molestie ante. Donec ac eleifend turpis.</p>
                                         </div>
+                                        <div class="one_third columns">
+                                            <h3>Our Mission</h3>
+                                            <ul class="list">
+                                                <li>Well Documented</li>
+                                                <li>Awesome Shortcodes</li>
+                                                <li>Ready Translation</li>
+                                                <li>Good Photoshop</li>
+                                            </ul>
+                                        </div>
+                                    </div> 
 
-                                    </section>
+                                    <div class="highlight-content">
+                                        <div class="top separator"></div>
+                                        <h4>"Maecenas sollicitudin, urna sit amet <span class="textcolor">tristique euismod</span>, tellus orci malesuada sapien, ut volutpat ante augue interdum leo. Ut neque <br>massa, lacinia et consectetur ac, <span class="textcolor">sodales ac risus</span>."</h4>
+                                        <em>John Doe - Developer</em>
+                                        <div class="bottom separator"></div>
+                                    </div>  
 
-                                </div>
+                                </section>
+
                             </section>
                         </div>
                     </div>
@@ -190,6 +187,7 @@
                 <div class="clear"></div><!-- clear float --> 
             </div><!-- end outercontainer -->
         </div><!-- end bodychild -->
+
 
         <!-- ////////////////////////////////// -->
         <!-- //      Javascript Files        // -->
@@ -204,10 +202,10 @@
         <!-- jQuery Carosel Slider -->
         <script type="text/javascript" src="js/jquery.elastislide.js"></script>
         <script type="text/javascript">
-            jQuery('#carousel').elastislide({
-                imageW: 135,
-                margin: 12
-            });
+                                                            jQuery('#carousel').elastislide({
+                                                                imageW: 135,
+                                                                margin: 12
+                                                            });
         </script>
 
         <!-- jQuery Dropdown Mobile -->
@@ -217,7 +215,5 @@
         <script type="text/javascript" src="js/custom.js"></script>
 
 
-
     </body>
 </html>
-
