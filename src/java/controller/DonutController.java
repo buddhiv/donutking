@@ -18,6 +18,8 @@ import model.Donut;
  * @author Buddhi
  */
 public class DonutController {
+    
+    
 
     public ArrayList<Donut> getAllDonuts() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM donut";
