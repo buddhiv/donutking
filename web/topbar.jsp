@@ -10,8 +10,12 @@
         <div class="row">
             <div id="topmenu" class=" six columns"></div>
             <div id="topright" class="six columns">
-                <div></div>
-                <div class="currency"> Welcome <a>Visitor</a>! You can <a href="#">login</a> or <a href="#">create an account</a></div>
+                <div class="currency"> <a>Orders</a></div>
+                <div class="currency">  
+                    <form action="logout.jsp" method="link">
+                    <input type="submit" class="button" value="Logout">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
