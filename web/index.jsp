@@ -61,17 +61,7 @@
                 <!-- HEADER -->
                 <div id="outerheader">
                     <header>
-                        <div id="top">
-                            <div class="container">
-                                <div class="row">
-                                    <div id="topmenu" class=" six columns"></div>
-                                    <div id="topright" class="six columns">
-                                        <div></div>
-                                        <div class="currency"> Welcome <a>Visitor</a>! You can <a href="#">login</a> or <a href="#">create an account</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <%@include file="topbar.jsp" %> %>
 
                         <div id="logo-wrapper">
                             <div class="container">
