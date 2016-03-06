@@ -27,11 +27,10 @@
             <div class="row">
                 <nav id="nav-wrap" class="twelve columns">
                     <ul id="sf-nav" class="sf-menu">
-                        <li><a href="index.jsp">Home</a></li>
-                        <li><a href="about.jsp">About Us</a></li>
-                        <li><a href="products.jsp">Products</a></li>
-                        <li><a href="login.jsp">Log IN</a></li>
-                        <li><a href="login_admin.jsp">Admin Log IN</a></li>
+                        <li><a href="admin_index.jsp">Add New User</a></li>
+                        <li><a href="admin_user_list.jsp">User List</a></li>
+                        <li><a href="admin_update_admin.jsp">My Account</a></li>
+                        <li><a href="logout.jsp">Log OUT</a></li>
                     </ul><!-- topnav -->
                 </nav><!-- nav -->	
             </div>

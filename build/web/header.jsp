@@ -30,7 +30,8 @@
                         <li><a href="index.jsp">Home</a></li>
                         <li><a href="about.jsp">About Us</a></li>
                         <li><a href="products.jsp">Products</a></li>
-                        <li><a href="cart.jsp">Cart</a></li>
+                        <li><a href="login.jsp">Log IN</a></li>
+                        <li><a href="login_admin.jsp">Admin Log IN</a></li>
                     </ul><!-- topnav -->
                 </nav><!-- nav -->	
             </div>

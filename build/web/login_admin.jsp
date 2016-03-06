@@ -74,21 +74,20 @@
                                 <div class="padcontent">
 
                                     <section class="content" id="login">
-                                        <h1 class="pagetitle">Login</h1>
+                                        <h1 class="pagetitle">Administrator Login</h1>
 
                                         <div class="one_half columns">
 
-                                            <form method="post" action="loginprocess.jsp" id="loginform">
+                                            <form method="post" action="loginprocess_admin.jsp" id="loginform">
                                                 <fieldset>
-                                                    <label>User Name</label><br />
-                                                    <input type="text" style="width: 300px" name="user_name"/><br />
+                                                    <label>Administrator Name</label><br />
+                                                    <input type="text" style="width: 300px" name="user_name" value="Admin" readonly/><br />
                                                     <label>Password</label><br />
                                                     <input type="password"  style="width: 300px" name="password"/><br />
                                                     
                                                     <input type="submit" class="button" value="login" />
                                                 </fieldset>
                                             </form><br>
-                                            <a href="./register.jsp">Don't have a account?</a>
                                         </div>
                                         <br>
                                         <hr>

@@ -35,4 +35,25 @@ public class LoginDao {
         return status;
 
     }
+    
+    
+    public static boolean validate_admin(LogIn bean) {
+        boolean status = false;
+        try {
+            Connection con = DBConnection.getConnection();
+
+            PreparedStatement ps = con.prepareStatement("select * from user where user_name=? and password=? and status=0");
+
+            ps.setString(1, bean.getUser_name());
+            ps.setString(2, bean.getPassword());
+
+            ResultSet rs = ps.executeQuery();
+            status = rs.next();
+
+        } catch (Exception e) {
+        }
+
+        return status;
+
+    }
 }
