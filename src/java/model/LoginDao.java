@@ -21,7 +21,7 @@ public class LoginDao {
         try {
             Connection con = DBConnection.getConnection();
 
-            PreparedStatement ps = con.prepareStatement("select * from user where user_name=? and password=?");
+            PreparedStatement ps = con.prepareStatement("select * from user where user_name=? and password=? and status=1");
 
             ps.setString(1, bean.getUser_name());
             ps.setString(2, bean.getPassword());

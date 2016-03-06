@@ -44,11 +44,7 @@
         ================================================== -->
         <link rel="shortcut icon" href="images/favicon.ico" />
 
-
-
     </head>
-
-
     <body>
 
         <div id="bodychild">
@@ -56,73 +52,7 @@
 
                 <!-- HEADER -->
                 <div id="outerheader">
-                    <header>
-                        <%@include file="topbar.jsp" %>%>
-
-                        <div id="logo-wrapper">
-                            <div class="container">
-                                <div class="row">
-                                    <div id="logo" class="six columns">
-                                        <a href="index.html"><img src="images/logo.png" alt=""/></a>
-                                        <span class="desc">Your Stop for Donuts</span>
-                                    </div>
-                                    <div class="right six columns">
-
-                                        <form action="#" id="searchform" method="get">
-
-                                            <input type="text" value="" id="search" name="search" class="field" placeholder="Search keywords here">
-                                            <input type="submit" value="" class="searchbutton">
-
-                                        </form>
-
-                                        <div id="shopping-cart-wrapper">
-                                            <div id="shopping_cart"><a href="#" id="shop-bag">Cart:(empty)</a><a class="btncart" href="#"></a>
-                                                <ul class="shop-box">
-                                                    <li>
-                                                        <h2>Product1</h2>
-                                                        <div class="price">1 x $150.00</div>
-                                                        <div class="clear"></div>
-                                                    </li>
-                                                    <li>
-                                                        <h2>Shipping</h2>
-                                                        <div class="price">1 x $10.00</div>
-                                                        <div class="clear"></div>
-                                                    </li>
-                                                    <li class="total">
-                                                        <h2>Total</h2>
-                                                        <div class="price"> $160.00</div>
-                                                        <div class="clear"></div>
-                                                    </li>
-                                                    <li class="btn-wrapper">
-                                                        <a href="#" class="cart">Cart</a> <a href="#" class="checkout">Checkout</a>
-                                                        <div class="clear"></div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <section id="navigation">
-                            <div class="container">
-                                <div class="row">
-                                    <nav id="nav-wrap" class="twelve columns">
-                                        <ul id="sf-nav" class="sf-menu">
-                                            <li><a href="index.jsp">Home</a></li>
-                                            <li><a href="about.jsp">About Us</a></li>
-                                            <li><a href="products.jsp">Products</a></li>
-                                            <li class="current"><a href="cart.jsp">Cart</a></li>
-                                        </ul><!-- topnav -->
-                                    </nav><!-- nav -->	
-                                </div>
-                            </div>
-                        </section>
-
-                        <div class="clear"></div>
-                    </header>
+                    <%@include file="header.jsp" %>%>
                 </div>
                 <!-- END HEADER -->
 

@@ -1,3 +1,13 @@
+
+<%@page import="controller.DonutController"%>
+<%@page import="model.Donut"%>
+<%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    DonutController donutController = new DonutController();
+%>
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -158,77 +168,41 @@
                                         </div>
                                         <br>
                                         <hr>
-                                        <div class="featured-products">  
-                                            <div class="header-wrapper">
-                                                <h2>Featured Products</h2><span></span>
-                                                <div class="clear"></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="one_fourth columns">
-                                                    <div class="product-wrapper">
-                                                        <a title="Men's Watch" href="product-details.html"><img src="images/content/products/p-31.jpg" alt=""/></a>
-                                                        <h3><a title="Men's Watch" href="product-details.html">Men's Watch</a></h3>
-                                                        <div class="price-cart-wrapper">
-                                                            <div class="price">
-                                                                $120.00
-                                                            </div>
-                                                            <div class="cart">
-                                                                <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                            </div>
-                                                            <div class="clear"></div>
+                                        
+                                        
+                                        <div class="new-products">                 
+                                        <div class="header-wrapper">
+                                            <h2>Recently Added</h2><span></span>
+                                            <div class="clear"></div>
+                                        </div>            
+                                        <div class="row">
+                                            <%
+                                                ArrayList<Donut> recentDonuts = donutController.getRecentDonuts();
+
+                                                for (Donut d : recentDonuts) {
+                                            %>
+                                            <div class="one_fifth columns">
+                                                <div class="product-wrapper">
+                                                    <a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><img src="images/products/<%= d.getId()%>.png" alt=""/></a>
+                                                    <h3><a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><%= d.getName()%></a></h3>
+                                                    <div class="price-cart-wrapper">
+                                                        <div class="price">
+                                                            <%= d.getPrice()%>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="one_fourth columns">
-                                                    <div class="product-wrapper">
-                                                        <a title="White Dress" href="product-details.html"><img src="images/content/products/p-6.jpg" alt=""/></a>
-                                                        <h3><a title="White Dress" href="product-details.html">White Dress</a></h3>
-                                                        <div class="price-cart-wrapper">
-                                                            <div class="price">
-                                                                $120.00
-                                                            </div>
-                                                            <div class="cart">
-                                                                <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                            </div>
-                                                            <div class="clear"></div>
+                                                        <div class="cart">
+                                                            <a href="product-details.html?id=<%= d.getId()%>" class="more">more</a>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="one_fourth columns">
-                                                    <div class="product-wrapper">
-                                                        <a title="Flower Handbag" href="product-details.html"><img src="images/content/products/p-32.jpg" alt=""/></a>
-                                                        <h3><a title="Flower Handbag" href="product-details.html">Flower Handbag</a></h3>
-                                                        <div class="price-cart-wrapper">
-                                                            <div class="price">
-                                                                $120.00
-                                                            </div>
-                                                            <div class="cart">
-                                                                <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="one_fourth columns">
-                                                    <div class="product-wrapper">
-                                                        <a title="Red High Heels" href="product-details.html"><img src="images/content/products/p-25.jpg" alt=""/></a>
-                                                        <h3><a title="Red High Heels" href="product-details.html">Red High Heels</a></h3>
-                                                        <div class="price-cart-wrapper">
-                                                            <div class="price">
-                                                                $120.00
-                                                            </div>
-                                                            <div class="cart">
-                                                                <a href="product-details.html" class="more">more</a> | <a href="#" class="buy">buy</a>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
+                                                        <div class="clear"></div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <%
+                                                }
+                                            %>
                                         </div>
+                                    </div>
 
-
-
+                                       
                                     </section>
 
                                 </div>
