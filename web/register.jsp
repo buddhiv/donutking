@@ -49,7 +49,7 @@
 
                 <!-- HEADER -->
                 <div id="outerheader">
-                    <%@include file="header.jsp" %>%>
+                    <%@include file="header.jsp" %>
                 </div>
                 <!-- END HEADER -->
 

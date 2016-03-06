@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/E:/Programming/HTML/DonutKing02/web/products.jsp</file>
             <file>file:/E:/Programming/HTML/DonutKing02/web/index.jsp</file>
             <file>file:/E:/Programming/HTML/DonutKing02/web/about.jsp</file>
             <file>file:/E:/Programming/HTML/DonutKing02/web/footer.jsp</file>
-            <file>file:/E:/Programming/HTML/DonutKing02/nbproject/build-impl.xml</file>
+            <file>file:/E:/Programming/HTML/DonutKing02/nbproject/build-impl.xml~</file>
             <file>file:/E:/Programming/HTML/DonutKing02/src/java/controller/DonutController.java</file>
             <file>file:/E:/Programming/HTML/DonutKing02/web/cart.jsp</file>
             <file>file:/E:/Programming/HTML/DonutKing02/web/checkout.html</file>
@@ -20,12 +19,8 @@
             <file>file:/E:/Programming/HTML/DonutKing02/src/java/web/AddUser.java</file>
             <file>file:/E:/Programming/HTML/DonutKing02/web/register.jsp</file>
             <file>file:/E:/Programming/HTML/DonutKing02/web/login.jsp</file>
-=======
-            <file>file:/C:/Users/Neo_/Desktop/Dounts%20JSP/donutking/web/login.jsp</file>
-            <file>file:/C:/Users/Neo_/Desktop/Dounts%20JSP/donutking/web/loginprocess.jsp</file>
-            <file>file:/C:/Users/Neo_/Desktop/Dounts%20JSP/donutking/src/java/model/LogIn.java</file>
-            <file>file:/C:/Users/Neo_/Desktop/Dounts%20JSP/donutking/src/java/model/Donut.java</file>
->>>>>>> ed45e75905f0c6fb407b440ba5b2dd4ee554841a
+            <file>file:/E:/Programming/HTML/DonutKing02/web/product-details.html</file>
+            <file>file:/E:/Programming/HTML/DonutKing02/web/product-details.jsp</file>
         </group>
     </open-files>
 </project-private>

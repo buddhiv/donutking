@@ -81,14 +81,14 @@
                                             %>
                                             <div class="one_fifth columns">
                                                 <div class="product-wrapper">
-                                                    <a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><img src="images/products/<%= d.getId()%>.png" alt=""/></a>
-                                                    <h3><a title="<%= d.getName()%>" href="product-details.html?id=<%= d.getId()%>"><%= d.getName()%></a></h3>
+                                                    <a title="<%= d.getName()%>" href="product-details.jsp?id=<%= d.getId()%>"><img src="images/products/<%= d.getId()%>.png" alt=""/></a>
+                                                    <h3><a title="<%= d.getName()%>" href="product-details.jsp?id=<%= d.getId()%>"><%= d.getName()%></a></h3>
                                                     <div class="price-cart-wrapper">
                                                         <div class="price">
                                                             <%= d.getPrice()%>
                                                         </div>
                                                         <div class="cart">
-                                                            <a href="product-details.html?id=<%= d.getId()%>" class="more">more</a>
+                                                            <a href="product-details.jsp?id=<%= d.getId()%>" class="more">more</a>
                                                         </div>
                                                         <div class="clear"></div>
                                                     </div>
