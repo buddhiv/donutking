@@ -53,6 +53,7 @@
         ================================================== -->
         <link rel="shortcut icon" href="images/favicon.ico" />
     </head>
+
     <body>
         <div id="bodychild">
             <div id="outercontainer">
@@ -60,8 +61,11 @@
                 <!-- HEADER -->
                 <div id="outerheader">
                     <header>
-                        <%@include file="topbar.jsp" %> %>
 
+                        <% if (session.getAttribute("session") != null) { %>
+                            <%@include file="topbar.jsp" %> 
+                        <% } %>
+                        
                         <div id="logo-wrapper">
                             <div class="container">
                                 <div class="row">
